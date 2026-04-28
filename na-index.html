@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="na-style.css">
+    <title>Document</title>
+</head>
+<body>
+  <script src="na-script.js"></script>
+    <!-- TOPBAR -->
+<div class="topbar">
+  <span>🇲🇾 Pusat Darah Negara — Kementerian Kesihatan Malaysia</span>
+  <div><a href="#">BM</a><a href="#">EN</a></div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a href="pdn-portal.html" class="logo">
+    <div class="logo-icon">🩸</div>
+    <div class="logo-text">
+      <strong>Pusat Darah Negara</strong>
+      <span>National Blood Centre Malaysia</span>
+    </div>
+  </a>
+  <div class="nav-sep"></div>
+  <a href="pdn-portal.html" class="back-btn">← Kembali ke Laman Utama</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero-strip">
+  <div class="badge">🔴 LANGSUNG</div>
+  <h1>Cari Lokasi <em>Derma Darah</em> Aktif</h1>
+  <p>Pilih negeri dan bandar anda untuk mencari kempen derma darah yang sedang aktif berhampiran.</p>
+</div>
+
+<!-- MAIN -->
+<div class="main-wrap">
+
+  <div class="disclaimer">
+    <span style="font-size:16px;flex-shrink:0">⚠️</span>
+    <span><strong>Nota:</strong> Data lokasi dalam demonstrasi ini adalah <strong>dummy/simulasi</strong>. Dalam implementasi sebenar, maklumat ini akan disambungkan secara langsung kepada pangkalan data PDN yang dikemaskini secara masa nyata.</span>
+  </div>
+
+  <div class="search-card">
+    <h2><span>🔍</span> Cari Mengikut Lokasi Anda</h2>
+    <div class="form-row">
+      <div class="field">
+        <label>Negeri</label>
+        <select id="stateSelect" onchange="loadCities()">
+          <option value="">— Pilih Negeri —</option>
+          <option value="selangor">Selangor</option>
+          <option value="kl">Kuala Lumpur (W.P.)</option>
+          <option value="johor">Johor</option>
+          <option value="perak">Perak</option>
+          <option value="penang">Pulau Pinang</option>
+          <option value="pahang">Pahang</option>
+          <option value="kedah">Kedah</option>
+          <option value="ns">Negeri Sembilan</option>
+          <option value="melaka">Melaka</option>
+          <option value="kelantan">Kelantan</option>
+          <option value="terengganu">Terengganu</option>
+          <option value="sabah">Sabah</option>
+          <option value="sarawak">Sarawak</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Bandar / Daerah</label>
+        <select id="citySelect" disabled onchange="enableSearch()">
+          <option value="">— Pilih Negeri Dahulu —</option>
+        </select>
+      </div>
+      <button class="search-btn" id="searchBtn" disabled onclick="doSearch()">
+        <span>🗺️</span> Cari Lokasi
+      </button>
+    </div>
+    <div class="filter-tags">
+      <span style="font-size:12px;color:var(--muted);font-weight:600;margin-right:4px">Tapis:</span>
+      <div class="filter-tag active" onclick="toggleFilter(this,'semua')">✅ Semua</div>
+      <div class="filter-tag" onclick="toggleFilter(this,'aktif')">🟢 Sedang Aktif</div>
+      <div class="filter-tag" onclick="toggleFilter(this,'akan')">🟡 Akan Datang</div>
+      <div class="filter-tag" onclick="toggleFilter(this,'hospital')">🏥 Hospital / Klinik</div>
+      <div class="filter-tag" onclick="toggleFilter(this,'kempen')">🚐 Kempen Bergerak</div>
+    </div>
+  </div>
+
+  <div class="legend">
+    <div class="legend-item"><div class="dot dot-active"></div> Sedang Aktif</div>
+    <div class="legend-item"><div class="dot dot-upcoming"></div> Akan Datang</div>
+    <div class="legend-item"><div class="dot dot-full"></div> Penuh / Ditutup</div>
+  </div>
+
+  <div id="loadingState" class="loading-state">
+    <div class="spinner"></div>
+    <div style="font-size:14px;color:var(--muted);font-weight:600">Mencari lokasi aktif...</div>
+  </div>
+
+  <div id="resultsArea">
+    <div class="empty-state">
+      <span class="empty-icon">📍</span>
+      <h3>Pilih Lokasi Anda</h3>
+      <p>Sila pilih negeri dan bandar di atas untuk melihat senarai kempen derma darah yang sedang aktif di kawasan anda.</p>
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<div class="page-footer">
+  © 2026 Pusat Darah Negara — <a href="pdn-portal.html">pdn.gov.my</a> &nbsp;|&nbsp; Hotline: 03-2613 2688
+</div>
+
+    
+</body>
+</html>
