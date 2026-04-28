@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Donation Finder</title>
+    <link class="MJstyle" rel="stylesheet" href="mj-style.css">
+    <link class="favIcon" rel="icon" type="image/x-icon" href="favicon.ico"
+</head>
+<body>
+    <ul>
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Utama</a>
+            <div class="dropdown-content">
+                <a href="#">Statistik</a>
+                <a href="#">Fakta</a>
+                <a href="#">Kenapa perlu derma darah?</a>
+                <a href="#">Berita</a>    
+            </div>
+        </li>
+        <li><a href="#about">Tentang PDN</a></li>
+        <li><a href="#service">Perhidmatan</a></li>
+        <li><a href="na-index.html">Cari Lokasi</a></li>
+        <li><a href="#jom">Jom Derma Darah!</a></li>        
+    </ul>
+
+    <h1>Derma Darah</h1>
+    <p>Marilah kita menderma darah agar dapat menyelamatakan nyawa sesorang.</p>
+
+    <h3 class="stats">Stok bekalan darah di Malaysia mengikut hospital :-</h3>
+        <ol class="bloodStats">
+            <li>A+</li>
+            <li>A-</li>
+            <li>B+</li>
+            <li>B-</li>
+            <li>AB+</li>
+            <li>AB-</li>
+            <li>O+</li>
+            <li>O-</li>
+        </ol>
+    <br><br>
+
+    <!-- BLOOD STOCK LOCATOR SECTION -->
+    <section id="loacte" class="locator-section">
+        <h2>Cari Lokasi Stok Darah / Find Blood Stock Location</h2>
+        
+        <div class="locator-container">
+            <!-- Language Toggle -->
+            <div class="language-toggle">
+                <button class="lang-btn active" data-lang="ms">Bahasa Melayu</button>
+                <button class="lang-btn" data-lang="en">English</button>
+            </div>
+
+            <!-- Filters -->
+            <div class="filters-section">
+                <h3 class="filter-title" data-ms="Penapis" data-en="Filters">Penapis</h3>
+                
+                <!-- State Filter -->
+                <div class="filter-group">
+                    <label class="filter-label" data-ms="Pilih Negeri" data-en="Select State">Pilih Negeri</label>
+                    <div class="checkbox-group" id="stateFilter"></div>
+                </div>
+
+                <!-- City Filter -->
+                <div class="filter-group">
+                    <label class="filter-label" data-ms="Pilih Bandar" data-en="Select City">Pilih Bandar</label>
+                    <div class="checkbox-group" id="cityFilter"></div>
+                </div>
+
+                <!-- Hospital Filter -->
+                <div class="filter-group">
+                    <label class="filter-label" data-ms="Pilih Hospital" data-en="Select Hospital">Pilih Hospital</label>
+                    <div class="checkbox-group" id="hospitalFilter"></div>
+                </div>
+
+                <!-- Blood Type Filter -->
+                <div class="filter-group">
+                    <label class="filter-label" data-ms="Jenis Darah" data-en="Blood Type">Jenis Darah</label>
+                    <div class="checkbox-group" id="bloodTypeFilter">
+                        <label><input type="checkbox" value="O+" class="blood-checkbox"> O+</label>
+                        <label><input type="checkbox" value="O-" class="blood-checkbox"> O-</label>
+                        <label><input type="checkbox" value="A+" class="blood-checkbox"> A+</label>
+                        <label><input type="checkbox" value="A-" class="blood-checkbox"> A-</label>
+                        <label><input type="checkbox" value="B+" class="blood-checkbox"> B+</label>
+                        <label><input type="checkbox" value="B-" class="blood-checkbox"> B-</label>
+                        <label><input type="checkbox" value="AB+" class="blood-checkbox"> AB+</label>
+                        <label><input type="checkbox" value="AB-" class="blood-checkbox"> AB-</label>
+                    </div>
+                </div>
+
+                <button class="reset-btn" id="resetFilters" data-ms="Set Semula" data-en="Reset">Set Semula</button>
+            </div>
+
+            <!-- Results -->
+            <div class="results-section">
+                <h3 class="results-title" data-ms="Keputusan" data-en="Results">Keputusan</h3>
+                <table class="results-table" id="resultsTable">
+                    <thead>
+                        <tr>
+                            <th data-ms="Hospital" data-en="Hospital">Hospital</th>
+                            <th data-ms="Bandar" data-en="City">Bandar</th>
+                            <th data-ms="Negeri" data-en="State">Negeri</th>
+                            <th data-ms="Jenis Darah" data-en="Blood Type">Jenis Darah</th>
+                            <th data-ms="Stok" data-en="Stock">Stok</th>
+                        </tr>
+                    </thead>
+                    <tbody id="resultsBody">
+                    </tbody>
+                </table>
+                <p class="no-results" id="noResults" data-ms="Tiada hasil ditemui. Sila ubah penapis anda." data-en="No results found. Please change your filters.">Tiada hasil ditemui. Sila ubah penapis anda.</p>
+            </div>
+        </div>
+    </section>
+
+    <br><br>
+    
+    <i></i>
+    <h2>Mengapa perlu Derma Darah?</h2>
+    <div class="benefit">
+        <div class="benefit-item"><h3>Mengurangkan risiko serangan jantung</h3><p>Menurut kajian daripada Jurnal Epidemiologi Amerika, menderma darah sekurang-kurangnya sekali setahun boleh mengurangkan 88% risiko serangan jantung.</p></div>
+        <div class="benefit-item"><h3>Megurangkan risiko kanser</h3><p>Iron yang berlebihan dalam badan juga dikaitkan dengan peningkatan risiko kanser.</p></div>
+        <div class="benefit-item"><h3>Meningkatkan peredaran darah</h3><p>Darah yang pekat tidak mengalir dengan baik menjadikannya lebih sukar untuk membawa oksigen ke pelbagai tisu di dalam badan anda.</p></div>
+        <div class="benefit-item"><h3>Pemeriksaan kesihatan percuma</h3><p>Sebelum menderma darah, anda perlu mendapatkan pemeriksaan kecil daripada profesional perubatan bagi menentukan sama ada anda berada dalam keadaan baik.</p></div>
+        <div class="benefit-item"><h3>Read more :- </h3><button><p><a href="https://hellodoktor.com/kesihatan/fakta-menarik/derma-darah-boleh-meningkatkan-kesihatan/">Ketahui lebih lanjut disini!</a></p></button></div>
+    </div>
+    <br><br>
+
+    <h2>Fakta tentang Darah Kita</h2>
+    <div class="facts">
+        <div class="facts-item"><h3>Darah emas?!</h3><p>Hanya 43 manusia di dunia miliki darah emas termasuk seorang rakyat Malaysia. Ini fakta yang perlu semua tahu</p><a href="https://sinarplus.sinarharian.com.my/Lifestyle/43-manusia-ada-darah-emas" style="text-decoration: none;">Klik untuk baca lebih lanjut →</a></p></div>
+        <div class="facts-item"><h3>Darah Manusia</h3><p>There are lots of facts about our blood that are interesting to know about</p><a href="https://blog.jobstore.com/2023/08/03/fakta-menarik-darah-manusia/" style="text-decoration: none;">Klik untuk baca lebih lanjut →</a></p></div>
+        <div class="facts-item"><h3>Lorem ipsum</h3><p>i love you</p><a href="#" style="text-decoration: none;">Klik untuk baca lebih lanjut →</a></p></div>
+    </div>
+    <br><br>
+    
+
+    <h2>Berita & Pengumuman </h2>
+    <div class="news">
+        <div class="news-item"><h3>Stok darah berkurang?</h3><p>text</p><p class="date-news">September 2025</p></div>
+        <div class="news-item"><h3>Tahun baru makin dekat</h3><p>text</p><p class="date-news">December 2025</p></div>
+        <div class="news-item"><h3>I love you</h3><p>text</p><p class="date-news">February 2026</p></div>
+    </div>
+    <br><br>
+
+    <h3>Ada masalah? Boleh hubungi kami melalui...</h3>
+    <div class="contact">
+        <div class="contact-item"><h4>Alamat Kami</h4><p>Jalan Tun Razak, 50400<br>Kuala Lumpur, Malaysia</p></div>
+        <div class="contact-item"><h4>Hubungi Kami</h4><p>Tel: 03 2345 6789<br>Faks: 03 2345 6789</p></div>
+        <div class="contact-item"><h4>E-mel</h4><p>name@gov.my<br>Isnin – Jumaat; 8:00 – 17:00</p></div>
+    </div>
+
+    <footer>
+
+    </footer>
+
+    
+    
+    
+
+   
+
+
+
+
+     <footer class="copyright">
+        © 2026 QAM — Section 481
+     </footer>
+
+    <script src="mj-script.js"></script>
+    
+</body>
+</html>

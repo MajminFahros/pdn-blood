@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 
 ul {
     list-style-type: none;
@@ -8,7 +12,6 @@ ul {
     display: flex;
     justify-content: center;
 }
-
 
 li a, .dropbtn {
     padding: 14px 16px;
@@ -60,4 +63,363 @@ li.dropdown {
     list-style-type: none;
 }
 
+.benefit {
+    display: flex;
+    background-color: #9C2007;
+    flex-direction: row;
+    flex-flow: row wrap;
+}
+
+.benefit-item {
+    background-color: #DBDBDB;
+    padding: 15px;
+    margin: 10px;
+    width: 100%;
+}
+
+.facts {
+    display: flex;
+    background-color: #9C2007;
+    flex-direction: row;
+    flex-flow: row wrap;
+}
+
+.facts-item {
+    background-color: #DBDBDB;
+    padding: 10px;
+    margin: 10px;
+    width: 100%;
+}
+
+
+.news {
+    display: flex;
+    background-color: #9C2007;
+    flex-direction: row;
+    flex-flow: row wrap;
+}
+
+.news-item {
+    background-color: #DBDBDB;
+    padding: 15px;
+    margin: 10px;
+    width: 100%;
+}
+
+.contact {
+    display: flex;
+    background-color: #F2F2F2;
+    justify-content: space-around;
+}
+
+.contact-item {
+    background-color: #C4C4C4;
+    padding: 5px;
+    margin: 5px;
+
+}
+
+
+@media(max-width:600px) {
+    .benefit {
+        flex-direction: column;
+    }
+}
+
+/* ============================================================
+   BLOOD STOCK LOCATOR STYLES
+   ============================================================ */
+
+.locator-section {
+    background-color: #F5F5F5;
+    padding: 30px;
+    margin: 20px 0;
+    border-left: 5px solid #9C2007;
+}
+
+.locator-section h2 {
+    color: #333333;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 0;
+}
+
+.locator-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Language Toggle */
+.language-toggle {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: flex-end;
+}
+
+.lang-btn {
+    padding: 8px 16px;
+    border: 2px solid #333333;
+    background-color: #DBDBDB;
+    color: #333333;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.lang-btn:hover {
+    background-color: #9C2007;
+    color: #DBDBDB;
+    border-color: #9C2007;
+}
+
+.lang-btn.active {
+    background-color: #9C2007;
+    color: #DBDBDB;
+    border-color: #9C2007;
+}
+
+/* Filters Section */
+.filters-section {
+    background-color: #DBDBDB;
+    padding: 20px;
+    border-radius: 4px;
+    margin-bottom: 30px;
+}
+
+.filter-title {
+    color: #333333;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #9C2007;
+    padding-bottom: 10px;
+}
+
+.filter-group {
+    margin-bottom: 20px;
+}
+
+.filter-label {
+    display: block;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 10px;
+    background-color: #F5F5F5;
+    border-radius: 4px;
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: #333333;
+    font-size: 14px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-right: 8px;
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+    accent-color: #9C2007;
+}
+
+.reset-btn {
+    padding: 10px 20px;
+    background-color: #9C2007;
+    color: #DBDBDB;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.reset-btn:hover {
+    background-color: #7A1805;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Results Section */
+.results-section {
+    background-color: #DBDBDB;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.results-title {
+    color: #333333;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #9C2007;
+    padding-bottom: 10px;
+}
+
+.results-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #F5F5F5;
+}
+
+.results-table thead {
+    background-color: #9C2007;
+}
+
+.results-table th {
+    color: #DBDBDB;
+    padding: 12px;
+    text-align: left;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border: 1px solid #333333;
+}
+
+.results-table td {
+    padding: 12px;
+    border: 1px solid #C4C4C4;
+    color: #333333;
+}
+
+.results-table tbody tr:nth-child(even) {
+    background-color: #E8E8E8;
+}
+
+.results-table tbody tr:hover {
+    background-color: #D4D4D4;
+}
+
+/* Stock Level Colors */
+.stock-very-high {
+    background-color: #4CAF50;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.stock-high {
+    background-color: #8BC34A;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.stock-medium {
+    background-color: #FFC107;
+    color: #333333;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.stock-low {
+    background-color: #FF9800;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.stock-very-low {
+    background-color: #F44336;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.no-results {
+    text-align: center;
+    color: #9C2007;
+    font-weight: bold;
+    padding: 20px;
+    font-size: 16px;
+}
+
+/* Responsive Design */
+@media(max-width:768px) {
+    .locator-section {
+        padding: 15px;
+    }
+
+    .checkbox-group {
+        gap: 10px;
+    }
+
+    .language-toggle {
+        justify-content: center;
+    }
+
+    .results-table {
+        font-size: 12px;
+    }
+
+    .results-table th, .results-table td {
+        padding: 8px;
+    }
+}
+
+@media(max-width:600px) {
+    .checkbox-group {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .checkbox-group label {
+        padding: 8px;
+    }
+
+    .results-table {
+        display: block;
+        width: 100%;
+    }
+
+    .results-table thead {
+        display: none;
+    }
+
+    .results-table tbody tr {
+        display: block;
+        margin-bottom: 10px;
+        border: 1px solid #C4C4C4;
+        background-color: #F5F5F5;
+    }
+
+    .results-table td {
+        display: block;
+        padding: 8px;
+        border: none;
+        border-bottom: 1px solid #E0E0E0;
+    }
+
+    .results-table td:before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: #9C2007;
+        display: block;
+    }
+}
 
